@@ -53,4 +53,19 @@ export class ApiService {
   securityProfile = (data:any) =>{
     return this.http.post("http://localhost:8080/securityProfile", data)
   }
+
+  addEmpEntry = (data:any)=>{
+    return this.http.post("http://localhost:8080/addEmpEntryLog", data)
+  }
+
+  addEmpExit = (data:any)=>{
+    return this.http.post("http://localhost:8080/addEmpExitLog", data)
+  }
+
+  addVisEntry = (data:any) =>{
+    return this.http.post("http://localhost:8080/addVisEntryLog",data)
+  }
+  addVisExit = (data:any) =>{
+    return this.http.post("http://localhost:8080/addVisExitLog",data)
+  }
 }

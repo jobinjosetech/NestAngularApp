@@ -36,4 +36,13 @@ export class ApiService {
   addSecurity = (data:any)=>{
     return this.http.post("http://localhost:8080/addSecurity", data)
   }
+
+  getAllLeaves = ()=>{
+    return this.http.get("http://localhost:8080/getAllLeaves")
+  }
+
+  handleLeave = (data:any)=>{
+    console.log(data)
+    return this.http.post("http://localhost:8080/updateLeaves", data)
+  }
 }

@@ -47,8 +47,10 @@ export class EditEmployeeComponent {
     (response:any)=>{
       if(response.status=="success"){
         alert("Employee data updated Successfully")
+        this.route.navigate(["/viewEmployee"])
       }else{
         alert("Error in editing employee")
+        this.route.navigate(["/viewEmployee"])
       }
     }
    )

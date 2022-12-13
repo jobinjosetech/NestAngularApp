@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./add-security.component.css']
 })
 export class AddSecurityComponent {
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService, private route:Router){}
   name=""
   email=""
   phone=""
@@ -31,8 +32,10 @@ export class AddSecurityComponent {
           this.username=""
           this.password=""
           alert("Security added successfully")
+          window.location.reload()
         }else{
           alert("Error in adding security")
+          window.location.reload()
         }
       }
     )

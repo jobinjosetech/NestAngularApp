@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./add-employee.component.css']
 })
 export class AddEmployeeComponent {
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService, private route:Router){}
   empCode=""
   empName=""
   empEmail=""
@@ -37,8 +38,10 @@ export class AddEmployeeComponent {
         this.username=""
         this.password=""
         alert("Employee Added Successfully")
+        window.location.reload()
       }else{
         alert("Error in adding employee")
+        window.location.reload()
       }
     }
    )

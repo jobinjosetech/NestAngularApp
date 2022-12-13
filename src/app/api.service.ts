@@ -45,4 +45,12 @@ export class ApiService {
     console.log(data)
     return this.http.post("http://localhost:8080/updateLeaves", data)
   }
+
+  securityLogin = (data:any)=>{
+    return this.http.post("http://localhost:8080/securityLogin", data)
+  }
+
+  securityProfile = (data:any) =>{
+    return this.http.post("http://localhost:8080/securityProfile", data)
+  }
 }

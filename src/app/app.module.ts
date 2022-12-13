@@ -11,6 +11,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { AdminNavBarComponent } from './admin-nav-bar/admin-nav-bar.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
+import { AddSecurityComponent } from './add-security/add-security.component';
 
 const myRoute:Routes = [
   {
@@ -28,6 +29,10 @@ const myRoute:Routes = [
   {
     path: "editEmployee",
     component: EditEmployeeComponent
+  },
+  {
+    path: "addSecurity",
+    component: AddSecurityComponent
   }
 ]
 
@@ -38,7 +43,8 @@ const myRoute:Routes = [
     AddEmployeeComponent,
     AdminNavBarComponent,
     ViewEmployeeComponent,
-    EditEmployeeComponent
+    EditEmployeeComponent,
+    AddSecurityComponent
   ],
   imports: [
     BrowserModule,

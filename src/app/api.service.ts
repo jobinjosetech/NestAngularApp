@@ -32,4 +32,8 @@ export class ApiService {
   getEmpById = (data:any)=>{
     return this.http.post("http://localhost:8080/employeeProfile", data)
   }
+
+  addSecurity = (data:any)=>{
+    return this.http.post("http://localhost:8080/addSecurity", data)
+  }
 }

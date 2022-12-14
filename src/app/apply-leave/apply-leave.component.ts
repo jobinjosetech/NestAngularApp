@@ -32,6 +32,7 @@ export class ApplyLeaveComponent {
         }else{
           alert("You don't have enough leaves")
         }
+        window.location.reload()
       }
     )
   }

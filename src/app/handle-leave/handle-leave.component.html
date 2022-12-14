@@ -45,7 +45,7 @@
                                     <td class="text-center">{{i.remarks}}</td>
                                     <div *ngIf="i.leave_status==0; then thenBlock else elseBlock"></div>
                                     <ng-template #thenBlock>
-                                            <td class="text-center">Nil</td>
+                                            <td class="text-center">Pending</td>
                                     </ng-template>
                                     <ng-template #elseBlock>
                                         <div *ngIf="i.leave_status==1; then thensBlock else elsesBlock"></div>

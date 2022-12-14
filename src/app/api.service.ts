@@ -68,4 +68,16 @@ export class ApiService {
   addVisExit = (data:any) =>{
     return this.http.post("http://localhost:8080/addVisExitLog",data)
   }
+
+  employeeLogin = (data:any)=>{
+    return this.http.post("http://localhost:8080/employeeLogin",data)
+  }
+
+  employeeProfile = (data:any)=>{
+    return this.http.post("http://localhost:8080/employeeProfile",data)
+  }
+
+  applyLeave = (data:any)=>{
+    return this.http.post("http://localhost:8080/applyLeave",data)
+  }
 }

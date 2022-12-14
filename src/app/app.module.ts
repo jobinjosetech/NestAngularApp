@@ -19,6 +19,9 @@ import { SecurityNavComponent } from './security-nav/security-nav.component';
 import { CreateLogComponent } from './create-log/create-log.component';
 import { VisitorsLogComponent } from './visitors-log/visitors-log.component';
 import { EmployeeLoginComponent } from './employee-login/employee-login.component';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
+import { EmplNavbarComponent } from './empl-navbar/empl-navbar.component';
+import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
 
 const myRoute:Routes = [
   {
@@ -60,6 +63,18 @@ const myRoute:Routes = [
   {
     path:"visitorLog",
     component: VisitorsLogComponent
+  },
+  {
+    path:"employeeLogin",
+    component: EmployeeLoginComponent
+  },
+  {
+    path:"employeeProfile",
+    component: EmployeeProfileComponent
+  },
+  {
+    path:"applyLeave",
+    component: ApplyLeaveComponent
   }
 ]
 
@@ -78,7 +93,10 @@ const myRoute:Routes = [
     SecurityNavComponent,
     CreateLogComponent,
     VisitorsLogComponent,
-    EmployeeLoginComponent
+    EmployeeLoginComponent,
+    EmployeeProfileComponent,
+    EmplNavbarComponent,
+    ApplyLeaveComponent
   ],
   imports: [
     BrowserModule,

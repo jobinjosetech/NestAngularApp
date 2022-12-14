@@ -89,4 +89,11 @@ export class ApiService {
     return this.http.post("http://localhost:8080/getLeaveDetails",data)
   }
   
+  getEmpLogs = (data:any)=>{
+    return this.http.post("http://localhost:8080/viewEmpLog",data)
+  }
+
+  getSecEmpLogs = ()=>{
+    return this.http.get("http://localhost:8080/viewSecEmpLog")
+  }
 }

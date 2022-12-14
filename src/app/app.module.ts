@@ -23,6 +23,8 @@ import { EmployeeProfileComponent } from './employee-profile/employee-profile.co
 import { EmplNavbarComponent } from './empl-navbar/empl-navbar.component';
 import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
 import { ViewEmployeeLeaveComponent } from './view-employee-leave/view-employee-leave.component';
+import { ViewEmployeeLogComponent } from './view-employee-log/view-employee-log.component';
+import { ViewSecEmpLogsComponent } from './view-sec-emp-logs/view-sec-emp-logs.component';
 
 const myRoute:Routes = [
   {
@@ -80,6 +82,14 @@ const myRoute:Routes = [
   {
     path:"viewEmployeeLeave",
     component: ViewEmployeeLeaveComponent
+  },
+  {
+    path:"viewEmployeeLog",
+    component: ViewEmployeeLogComponent
+  },
+  {
+    path:"viewSecEmpLog",
+    component: ViewSecEmpLogsComponent
   }
 ]
 
@@ -103,6 +113,8 @@ const myRoute:Routes = [
     EmplNavbarComponent,
     ApplyLeaveComponent,
     ViewEmployeeLeaveComponent,
+    ViewEmployeeLogComponent,
+    ViewSecEmpLogsComponent,
   ],
   imports: [
     BrowserModule,

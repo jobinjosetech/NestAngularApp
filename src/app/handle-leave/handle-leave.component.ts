@@ -28,7 +28,11 @@ export class HandleLeaveComponent {
     this.api.handleLeave(data).subscribe(
       (response:any)=>{
         if(response.status=="success"){
-          alert("success")
+          if(status == 1){
+            alert("Leave Approved")
+          }else{
+            alert("Leave Rejected")
+          }
           window.location.reload()
         }else{
           alert("failed")

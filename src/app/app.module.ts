@@ -22,6 +22,7 @@ import { EmployeeLoginComponent } from './employee-login/employee-login.componen
 import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 import { EmplNavbarComponent } from './empl-navbar/empl-navbar.component';
 import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
+import { ViewEmployeeLeaveComponent } from './view-employee-leave/view-employee-leave.component';
 
 const myRoute:Routes = [
   {
@@ -75,6 +76,10 @@ const myRoute:Routes = [
   {
     path:"applyLeave",
     component: ApplyLeaveComponent
+  },  
+  {
+    path:"viewEmployeeLeave",
+    component: ViewEmployeeLeaveComponent
   }
 ]
 
@@ -96,7 +101,8 @@ const myRoute:Routes = [
     EmployeeLoginComponent,
     EmployeeProfileComponent,
     EmplNavbarComponent,
-    ApplyLeaveComponent
+    ApplyLeaveComponent,
+    ViewEmployeeLeaveComponent,
   ],
   imports: [
     BrowserModule,

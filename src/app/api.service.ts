@@ -80,4 +80,13 @@ export class ApiService {
   applyLeave = (data:any)=>{
     return this.http.post("http://localhost:8080/applyLeave",data)
   }
+
+  getEmpLeaves = (data:any)=>{
+    return this.http.post("http://localhost:8080/getEmployeeLeaves",data)
+  }
+
+  getLeaveDetails = (data:any)=>{
+    return this.http.post("http://localhost:8080/getLeaveDetails",data)
+  }
+  
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -13,8 +14,13 @@ export class ApplyLeaveComponent {
   to = ""
   remarks = ""
   type = ""
-  constructor(private api:ApiService) {
+  constructor(private api:ApiService, private route:Router) {
     this.empId = localStorage.getItem("userInfo")
+    api.getLeaveDetails({"id":this.empId}).subscribe(
+      (response:any)=>{
+        this.leaveDetails = response
+      }
+    )
   }
 
   applyLeave = () => {
@@ -29,11 +35,13 @@ export class ApplyLeaveComponent {
       (response:any)=>{
         if(response.status=="success"){
           alert("Leave Request Submitted Successfully")
+          this.route.navigate(["/viewEmployeeLeave"])
+          
         }else{
           alert("You don't have enough leaves")
         }
-        window.location.reload()
       }
     )
   }
+  leaveDetails:any = []
 }

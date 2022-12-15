@@ -10,21 +10,11 @@ export class VisitorsLogComponent {
   constructor(private api:ApiService){}
   name=""
   phone=""
-  email=""
 
-  readValue = ()=>{
-    let data:any = {
-      "name":this.name,
-      "phone":this.phone,
-      "email":this.email
-    }
-
-  }
   addEntry = ()=>{
     let data:any = {
       "name":this.name,
       "phone":this.phone,
-      "email":this.email
     }
     this.api.addVisEntry(data).subscribe(
       (response:any)=>{
@@ -41,9 +31,7 @@ export class VisitorsLogComponent {
 
   addExit = ()=>{
     let data:any = {
-      "name":this.name,
       "phone":this.phone,
-      "email":this.email
     }
     this.api.addVisExit(data).subscribe(
       (response:any)=>{

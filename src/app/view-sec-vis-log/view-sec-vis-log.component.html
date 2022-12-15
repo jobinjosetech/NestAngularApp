@@ -4,7 +4,7 @@
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <h1 class="text-center text-primary mb-4">Employee Logs</h1>
+                    <h1 class="text-center text-primary mb-4">Visitors Logs</h1>
                 </div>
                 <div
                     class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mb-5 d-flex justify-content-center">
@@ -21,8 +21,8 @@
                     <table class="table justify-content-center table-bordered mb-5">
                         <thead class="bg-light">
                             <tr>
-                                <th class="text-center" scope="col">Employee Code</th>
                                 <th class="text-center" scope="col">Name</th>
+                                <th class="text-center" scope="col">Phone</th>
                                 <th class="text-center" scope="col">Date</th>
                                 <th class="text-center" scope="col">Entry Time</th>
                                 <th class="text-center" scope="col">Exit Time</th>
@@ -43,14 +43,12 @@
                             </ng-template>
                             <ng-template #dataScreen>
                                 <tr *ngFor="let i of searchData">
-                                    <td class="text-center">{{i.emp_code}}</td>
                                     <td class="text-center">{{i.name}}</td>
+                                    <td class="text-center">{{i.phone}}</td>
                                     <td class="text-center">{{i.date}}</td>
-                                    <td class="text-center">{{i.entry_time}}</td>
-                                    <td class="text-center" *ngIf="i.exit_time!=null;else temp ">{{i.exit_time}}</td>
-                                    <ng-template #temp>
-                                        <td class="text-center">not exited</td>
-                                    </ng-template>
+                                    <td class="text-center">{{i.entryTime}}</td>
+                                    <td class="text-center" *ngIf="i.exitTime!=null;else temp ">{{i.exitTime}}</td>
+                                    <ng-template #temp><td class="text-center">not exited</td></ng-template>
                                 </tr>
                             </ng-template>
 
@@ -62,8 +60,8 @@
                     <table class="table justify-content-center table-striped table-bordered mb-5">
                         <thead class="bg-light">
                             <tr>
-                                <th class="text-center" scope="col">Employee Code</th>
                                 <th class="text-center" scope="col">Name</th>
+                                <th class="text-center" scope="col">Phone</th>
                                 <th class="text-center" scope="col">Date</th>
                                 <th class="text-center" scope="col">Entry Time</th>
                                 <th class="text-center" scope="col">Exit Time</th>
@@ -83,15 +81,13 @@
                                 </div>
                             </ng-template>
                             <ng-template #dataScreen>
-                                <tr *ngFor="let i of secemplogs">
-                                    <td class="text-center">{{i.emp_code}}</td>
+                                <tr *ngFor="let i of visitorLogs">
                                     <td class="text-center">{{i.name}}</td>
+                                    <td class="text-center">{{i.phone}}</td>
                                     <td class="text-center">{{i.date}}</td>
-                                    <td class="text-center">{{i.entry_time}}</td>
-                                    <td class="text-center" *ngIf="i.exit_time!=null;else temp ">{{i.exit_time}}</td>
-                                    <ng-template #temp>
-                                        <td class="text-center">not exited</td>
-                                    </ng-template>
+                                    <td class="text-center">{{i.entryTime}}</td>
+                                    <td class="text-center" *ngIf="i.exitTime!=null;else temp ">{{i.exitTime}}</td>
+                                    <ng-template #temp><td class="text-center">not exited</td></ng-template>
                                 </tr>
                             </ng-template>
 

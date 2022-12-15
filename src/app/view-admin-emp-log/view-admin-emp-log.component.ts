@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-view-sec-emp-logs',
-  templateUrl: './view-sec-emp-logs.component.html',
-  styleUrls: ['./view-sec-emp-logs.component.css']
+  selector: 'app-view-admin-emp-log',
+  templateUrl: './view-admin-emp-log.component.html',
+  styleUrls: ['./view-admin-emp-log.component.css']
 })
-export class ViewSecEmpLogsComponent {
+export class ViewAdminEmpLogComponent {
   date=""
   constructor(private api:ApiService){
     api.getSecEmpLogs().subscribe(

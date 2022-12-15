@@ -21,7 +21,7 @@ export class CreateLogComponent {
           alert("success")
           window.location.reload()
         }else{
-          alert("failed")
+          alert("Employee is in Leave")
         }
       }
     )
@@ -37,7 +37,7 @@ export class CreateLogComponent {
           alert("success")
           window.location.reload()
         }else{
-          alert("failed")
+          alert("Employee entry not found")
         }
       }
     )

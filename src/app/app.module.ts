@@ -25,6 +25,9 @@ import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
 import { ViewEmployeeLeaveComponent } from './view-employee-leave/view-employee-leave.component';
 import { ViewEmployeeLogComponent } from './view-employee-log/view-employee-log.component';
 import { ViewSecEmpLogsComponent } from './view-sec-emp-logs/view-sec-emp-logs.component';
+import { ViewSecVisLogComponent } from './view-sec-vis-log/view-sec-vis-log.component';
+import { ViewAdminEmpLogComponent } from './view-admin-emp-log/view-admin-emp-log.component';
+import { ViewAdminVisLogComponent } from './view-admin-vis-log/view-admin-vis-log.component';
 
 const myRoute:Routes = [
   {
@@ -90,6 +93,18 @@ const myRoute:Routes = [
   {
     path:"viewSecEmpLog",
     component: ViewSecEmpLogsComponent
+  },
+  {
+    path:"viewSecVisLog",
+    component: ViewSecVisLogComponent
+  },
+  {
+    path:"viewAdminEmpLog",
+    component: ViewAdminEmpLogComponent
+  },
+  {
+    path:"viewAdminVisLog",
+    component: ViewAdminVisLogComponent
   }
 ]
 
@@ -115,6 +130,9 @@ const myRoute:Routes = [
     ViewEmployeeLeaveComponent,
     ViewEmployeeLogComponent,
     ViewSecEmpLogsComponent,
+    ViewSecVisLogComponent,
+    ViewAdminEmpLogComponent,
+    ViewAdminVisLogComponent,
   ],
   imports: [
     BrowserModule,

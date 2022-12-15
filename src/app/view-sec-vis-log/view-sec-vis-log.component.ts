@@ -2,31 +2,31 @@ import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-view-sec-emp-logs',
-  templateUrl: './view-sec-emp-logs.component.html',
-  styleUrls: ['./view-sec-emp-logs.component.css']
+  selector: 'app-view-sec-vis-log',
+  templateUrl: './view-sec-vis-log.component.html',
+  styleUrls: ['./view-sec-vis-log.component.css']
 })
-export class ViewSecEmpLogsComponent {
+export class ViewSecVisLogComponent {
   date=""
   constructor(private api:ApiService){
-    api.getSecEmpLogs().subscribe(
+    api.getSecVisLogs().subscribe(
       (response:any)=>{
         console.log(response)
         this.loading = false
-        this.secemplogs = response
+        this.visitorLogs = response
       }
     )
   }
 
   searchLog = ()=>{
-    this.api.searchLogs({"date":this.date}).subscribe(
+    this.api.searchVisLogs({"date":this.date}).subscribe(
       (response:any)=>{
         this.searchData = response
       }
     )
   }
 
-  secemplogs:any = []
+  visitorLogs:any = []
   loading:boolean = true
   searchData:any = []
 }
